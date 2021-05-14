@@ -717,8 +717,8 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-cl);
-  margin-bottom: 12px;
 }
+
 .modal-icon {
   position: absolute;
   top: 55%;
@@ -756,7 +756,8 @@ p {
   width: 11px;
   height: 11px;
 }
-.modal-coles-btn:hover {
+.modal-coles-btn:hover,
+.modal-coles-btn:focus {
   fill: #2196f3;
 }
 
@@ -771,9 +772,6 @@ p {
   margin-bottom: 4px;
 }
 
-.modal-form {
-  width: calc((100% - 40px) / 1);
-}
 .modal-contacts-form {
   height: 40px;
   width: 100%;
@@ -803,7 +801,7 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
 .modal-btn {
-  margin-left: 25%;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   background: var(--button-bg);
@@ -848,6 +846,13 @@ p {
   background-size: contain;
   background-color: var(--button-bg);
   border-color: var(--button-bg);
+}
+
+.checkbox:focus + .checkbox-label::before,
+.checkbox:hover + .checkbox-label::before {
+  border-color: var(--tittle-cl);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .link-modal {
